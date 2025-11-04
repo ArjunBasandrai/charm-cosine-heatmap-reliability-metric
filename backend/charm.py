@@ -208,4 +208,5 @@ def charm(images, device, model, win=15, alpha=0.9):
         "F": _rgb_numpy_to_base64_png(F_over),
         "G": _rgb_numpy_to_base64_png(G_over),
         "R": round(float(R.item()), 4),
+        "class": ["No Diabetic Retinopathy", "Mild Diabetic Retinopathy", "Moderate Diabetic Retinopathy", "Severe Diabetic Retinopathy", "Proliferative Diabetic Retinopathy"][int(preds.item())]
     }
